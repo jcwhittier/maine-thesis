@@ -217,19 +217,6 @@
 \def \AppendixNametext{APPENDIX}
 \def \appendixnametext{Appendix}
 
-%\renewcommand*\contentsname{TABLE OF CONTENTS}
-%\renewcommand*\listfigurename{LIST OF FIGURES}
-%\renewcommand*\listtablename{LIST OF TABLES}
-%\newcommand*\listname{LIST OF}
-%\renewcommand*\bibname{\@bibtitle}
-%\renewcommand*\indexname{INDEX}
-%\renewcommand*\partname{VOLUME}
-%\renewcommand*\chaptername{Chapter}
-%\newcommand*\chapternamep{\chaptername s}
-%\newcommand*\AppendixName{APPENDIX}
-%\renewcommand*\appendixname{Appendix}
-
-
 \renewcommand{\contentsname}{\contentsnametext}
 \renewcommand{\listfigurename}{\listfigurenametext}
 \renewcommand{\listtablename}{\listtablenametext}
@@ -241,16 +228,6 @@
 \newcommand{\chapternamep}{\chaptername s}
 \newcommand{\AppendixName}{\AppendixNametext}
 \renewcommand{\appendixname}{\appendixnametext}
-		  
-
-
-
-
-%%%%%% BABEL COMPATABILITY %%%%%%%%
-
-
-
-
 
 \AfterPackage{babel}{
 	\addto\captionsenglish{\renewcommand{\contentsname}{\contentsnametext}}
@@ -265,26 +242,6 @@
 	\addto\captionsenglish{\renewcommand{\AppendixName}{\AppendixNametext}}
 	\addto\captionsenglish{\renewcommand{\appendixname}{\appendixnametext}}
 }
-
-	
-            
-		   
-%		 \renewcommand{\listfigurename}{\listfigurenametext}%
-%		 \renewcommand{\listtablename}{\listtablenametext}%
-%		 \renewcommand{\listname}{\listnametext}%
-%		 \renewcommand{\bibname}{\@bibtitle}%
-%		 \renewcommand{\indexname}{\indexnametext}%
-%		 \renewcommand{\partname}{\partnametext}%
-%		 \renewcommand{\chaptername}{\chapternametext}%
-%		 \renewcommand{\chapternameep}{\chaptername s}%
-%		 \renewcommand{\AppendixName}{\AppendixNametext}%
-%		 \renewcommand{\appendixnamet}{\appendixnametext}
-		  
-		
-
-
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%
