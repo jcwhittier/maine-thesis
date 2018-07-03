@@ -27,6 +27,7 @@
 %%%%%%%%%%%%%%%%%%%%%
 % ------INITIAL CODE------
 %%%%%%%%%%%%%%%%%%%%%
+
 \newif\ifdraft\draftfalse
 \newif\iftwoside\twosidefalse
 \newif\ifofficial\officialtrue
@@ -84,6 +85,7 @@
 \RequirePackage{iftex}[2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, and LuaTeX]
 \RequirePackage{geometry}[2010/09/12 v5.6 Page Geometry]
 \RequirePackage{xstring}[2013/10/13 v1.7c  String manipulations (C Tellechea)]
+
 \AfterPackage{hyperref}{% There are a few changes that are required for the hyperref package, so we make those changes if it is loaded.
 	\hypersetup{ pdfdisplaydoctitle=true}
 	\AtBeginDocument{
@@ -205,17 +207,85 @@
 \newcount\numadv \numadv=1
 \newcounter{partlength}[part]
 
-\renewcommand*\contentsname{TABLE OF CONTENTS}
-\renewcommand*\listfigurename{LIST OF FIGURES}
-\renewcommand*\listtablename{LIST OF TABLES}
-\newcommand*\listname{LIST OF}
-\renewcommand*\bibname{\@bibtitle}
-\renewcommand*\indexname{INDEX}
-\renewcommand*\partname{VOLUME}
-\renewcommand*\chaptername{Chapter}
-\newcommand*\chapternamep{\chaptername s}
-\newcommand*\AppendixName{APPENDIX}
-\renewcommand*\appendixname{Appendix}
+\def \contentsnametext {TABLE OF CONTENTS}
+\def \listfigurenametext{LIST OF FIGURES}
+\def \listtablenametext{LIST OF TABLES}
+\def \listnametext{LIST OF}
+\def \indexnametext{INDEX}
+\def \partnametext{VOLUME}
+\def \chapternametext{Chapter}
+\def \AppendixNametext{APPENDIX}
+\def \appendixnametext{Appendix}
+
+%\renewcommand*\contentsname{TABLE OF CONTENTS}
+%\renewcommand*\listfigurename{LIST OF FIGURES}
+%\renewcommand*\listtablename{LIST OF TABLES}
+%\newcommand*\listname{LIST OF}
+%\renewcommand*\bibname{\@bibtitle}
+%\renewcommand*\indexname{INDEX}
+%\renewcommand*\partname{VOLUME}
+%\renewcommand*\chaptername{Chapter}
+%\newcommand*\chapternamep{\chaptername s}
+%\newcommand*\AppendixName{APPENDIX}
+%\renewcommand*\appendixname{Appendix}
+
+
+\renewcommand{\contentsname}{\contentsnametext}
+\renewcommand{\listfigurename}{\listfigurenametext}
+\renewcommand{\listtablename}{\listtablenametext}
+\newcommand{\listname}{\listnametext}
+\renewcommand{\bibname}{\@bibtitle}
+\renewcommand{\indexname}{\indexnametext}
+\renewcommand{\partname}{\partnametext}
+\renewcommand{\chaptername}{\chapternametext}
+\newcommand{\chapternamep}{\chaptername s}
+\newcommand{\AppendixName}{\AppendixNametext}
+\renewcommand{\appendixname}{\appendixnametext}
+		  
+
+
+
+
+%%%%%% BABEL COMPATABILITY %%%%%%%%
+
+
+
+
+
+\AfterPackage{babel}{
+	\addto\captionsenglish{\renewcommand{\contentsname}{\contentsnametext}}
+	\addto\captionsenglish{\renewcommand{\listfigurename}{\listfigurenametext}}
+	\addto\captionsenglish{\renewcommand{\listtablename}{\listtablenametext}}
+	\addto\captionsenglish{\renewcommand{\listname}{\listnametext}}	
+	\addto\captionsenglish{\renewcommand{\bibname}{\@bibtitle}}
+	\addto\captionsenglish{\renewcommand{\indexname}{\indexnametext}}
+	\addto\captionsenglish{\renewcommand{\partname}{\partnametext}}
+	\addto\captionsenglish{\renewcommand{\chaptername}{\chapternametext}}
+	\addto\captionsenglish{\renewcommand{\chapternamep}{\chaptername s}}
+	\addto\captionsenglish{\renewcommand{\AppendixName}{\AppendixNametext}}
+	\addto\captionsenglish{\renewcommand{\appendixname}{\appendixnametext}}
+}
+
+	
+            
+		   
+%		 \renewcommand{\listfigurename}{\listfigurenametext}%
+%		 \renewcommand{\listtablename}{\listtablenametext}%
+%		 \renewcommand{\listname}{\listnametext}%
+%		 \renewcommand{\bibname}{\@bibtitle}%
+%		 \renewcommand{\indexname}{\indexnametext}%
+%		 \renewcommand{\partname}{\partnametext}%
+%		 \renewcommand{\chaptername}{\chapternametext}%
+%		 \renewcommand{\chapternameep}{\chaptername s}%
+%		 \renewcommand{\AppendixName}{\AppendixNametext}%
+%		 \renewcommand{\appendixnamet}{\appendixnametext}
+		  
+		
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%
 % Variable Modification Commands
