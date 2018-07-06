@@ -207,40 +207,40 @@
 \newcount\numadv \numadv=1
 \newcounter{partlength}[part]
 
-\def \contentsnametext {TABLE OF CONTENTS}
-\def \listfigurenametext{LIST OF FIGURES}
-\def \listtablenametext{LIST OF TABLES}
-\def \listnametext{LIST OF}
-\def \indexnametext{INDEX}
-\def \partnametext{VOLUME}
-\def \chapternametext{Chapter}
-\def \AppendixNametext{APPENDIX}
-\def \appendixnametext{Appendix}
+\def \mt@contentsname {TABLE OF CONTENTS}
+\def \mt@listfigurename{LIST OF FIGURES}
+\def \mt@listtablename{LIST OF TABLES}
+\def \mt@listname{LIST OF}
+\def \mt@indexname{INDEX}
+\def \mt@partname{VOLUME}
+\def \mt@chaptername{Chapter}
+\def \mt@AppendixName{APPENDIX}
+\def \mt@appendixname{Appendix}
 
-\renewcommand{\contentsname}{\contentsnametext}
-\renewcommand{\listfigurename}{\listfigurenametext}
-\renewcommand{\listtablename}{\listtablenametext}
-\newcommand{\listname}{\listnametext}
+\renewcommand{\contentsname}{\mt@contentsname}
+\renewcommand{\listfigurename}{\mt@listfigurename}
+\renewcommand{\listtablename}{\lmt@isttablename}
+\newcommand{\listname}{\mt@listname}
 \renewcommand{\bibname}{\@bibtitle}
-\renewcommand{\indexname}{\indexnametext}
-\renewcommand{\partname}{\partnametext}
-\renewcommand{\chaptername}{\chapternametext}
-\newcommand{\chapternamep}{\chaptername s}
-\newcommand{\AppendixName}{\AppendixNametext}
-\renewcommand{\appendixname}{\appendixnametext}
+\renewcommand{\indexname}{\mt@indexname}
+\renewcommand{\partname}{\mt@partname}
+\renewcommand{\chaptername}{\mt@chaptername}
+\newcommand{\chapternamep}{\mt@chaptername s}
+\newcommand{\AppendixName}{\mt@AppendixName}
+\renewcommand{\appendixname}{\mt@appendixname}
 
 \AfterPackage{babel}{
-	\addto\captionsenglish{\renewcommand{\contentsname}{\contentsnametext}}
-	\addto\captionsenglish{\renewcommand{\listfigurename}{\listfigurenametext}}
-	\addto\captionsenglish{\renewcommand{\listtablename}{\listtablenametext}}
-	\addto\captionsenglish{\renewcommand{\listname}{\listnametext}}	
+	\addto\captionsenglish{\renewcommand{\contentsname}{\mt@contentsname}}
+	\addto\captionsenglish{\renewcommand{\listfigurename}{\mt@listfigurename}}
+	\addto\captionsenglish{\renewcommand{\listtablename}{\mt@listtablename}}
+	\addto\captionsenglish{\renewcommand{\listname}{\mt@listname}}	
 	\addto\captionsenglish{\renewcommand{\bibname}{\@bibtitle}}
-	\addto\captionsenglish{\renewcommand{\indexname}{\indexnametext}}
-	\addto\captionsenglish{\renewcommand{\partname}{\partnametext}}
-	\addto\captionsenglish{\renewcommand{\chaptername}{\chapternametext}}
-	\addto\captionsenglish{\renewcommand{\chapternamep}{\chaptername s}}
-	\addto\captionsenglish{\renewcommand{\AppendixName}{\AppendixNametext}}
-	\addto\captionsenglish{\renewcommand{\appendixname}{\appendixnametext}}
+	\addto\captionsenglish{\renewcommand{\indexname}{\mt@indexname}}
+	\addto\captionsenglish{\renewcommand{\partname}{\mt@partname}}
+	\addto\captionsenglish{\renewcommand{\chaptername}{\mt@chaptername}}
+	\addto\captionsenglish{\renewcommand{\chapternamep}{\mt@chaptername s}}
+	\addto\captionsenglish{\renewcommand{\AppendixName}{\mt@AppendixName}}
+	\addto\captionsenglish{\renewcommand{\appendixname}{\mt@appendixname}}
 }
 
 
