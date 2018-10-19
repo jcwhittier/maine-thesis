@@ -1,7 +1,21 @@
 \documentclass{maine-thesis}  % Default options 12pt and final copy
 
 % Include necessary packages here
-% \usepackage{...}
+\usepackage{babel}
+\usepackage{listings}
+
+
+% configuration for list of queries
+\renewcommand\lstlistingname{Query}
+\renewcommand\lstlistlistingname{LIST OF QUERIES}
+\def\lstlistingautorefname{Query}
+
+\makeatletter
+\renewcommand{\l@lstlisting}[2]{%
+  \@dottedtocline{1}{0em}{2.8em}{\lstlistingname\ #1}{#2}%
+}
+\makeatother
+
 
 % Replace contents of {...} with your own information.
 \title{...}					% Title of thesis
